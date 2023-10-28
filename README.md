@@ -10,12 +10,14 @@ orders = pd.read_csv('shoefly.csv')
 print(orders)
 ![head](https://github.com/Kyra-124/data-analysis/assets/98788777/892dcccd-fcd6-4a81-9cb5-06e3a5ae50f2) 
 
+
 //task 2
 Your marketing department wants to send out an email blast to everyone who ordered shoes!
 
 Select all of the email addresses from the column email and save them to a variable called emails.://
 
 emails = orders.email
+
 
 //task 3
 Frances Palmer claims that her order was wrong. What did Frances Palmer order?
@@ -27,5 +29,13 @@ frances_palmer = orders[(orders.first_name == 'Frances') | (orders.last_name == 
 print(frances_palmer)
 
 ![wrong_order](https://github.com/Kyra-124/data-analysis/assets/98788777/909a682f-f0b9-492e-829d-00b09b50e0a4)
+
+Frances Palmer ordered a White wedge, made with Leather material.
+
+//task 4
+Select all orders for shoe_type: clogs, boots, and ballet flats and save them to the variable comfy_shoes.://
+
+comfy_shoes = orders[orders.shoe_type.isin(['clogs', 'boots', 'ballet flats'])]
+print(comfy_shoes)
 
 
